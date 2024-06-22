@@ -1,4 +1,3 @@
-
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -6,7 +5,7 @@ import joblib
 from sklearn.preprocessing import StandardScaler
 
 # Modeli yükleme
-best_model = joblib.load('best_model.pkl')
+#best_model = joblib.load('best_model.pkl')
 
 # Veri ölçekleyici
 scaler = StandardScaler()
@@ -39,7 +38,7 @@ gtp = st.number_input("GTP", min_value=0, max_value=1000, step=1)
 dental_caries = st.number_input("Diş Çürüğü", min_value=0, max_value=1, step=1)
 
 # Tahmin butonu
-if st.button("Sigara İçme Durumunu Tahmin Et"):
+''' if st.button("Sigara İçme Durumunu Tahmin Et"):
     # Kullanıcıdan alınan verileri bir araya getirme
     user_data = np.array([age, height, weight, waist, eyesight_left, eyesight_right, hearing_left, hearing_right, 
                           systolic, relaxation, fasting_blood_sugar, cholesterol, triglyceride, hdl, ldl, 
@@ -56,3 +55,4 @@ if st.button("Sigara İçme Durumunu Tahmin Et"):
         st.write("Tahmin: Sigara içiyor 🚬")
     else:
         st.write("Tahmin: Sigara içmiyor 🚭")
+'''
